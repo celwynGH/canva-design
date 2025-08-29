@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canva Design Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Unique Canva Designs for Your Business</h1>
+      <p>Beautiful, ready-to-use templates that make your brand stand out.</p>
+      <a href="#shop" class="cta-btn">Buy Now</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>Why Choose My Canva Designs?</h2>
+    <p>
+      Each template is crafted with modern design principles, perfect for social media, 
+      marketing, and personal projects. Easy to edit and customize to fit your style!
+    </p>
+  </section>
+
+  <!-- Shop Section -->
+  <section id="shop" class="shop">
+    <h2>Featured Templates</h2>
+    <div class="card-container">
+      
+      <!-- Template 1 -->
+      <div class="card">
+        <img src="design1.jpg" alt="Design Template 1">
+        <h3>Social Media Pack</h3>
+        <p>Editable posts and stories for Instagram & Facebook.</p>
+
+        <!-- PayPal Button -->
+        <form action="https://www.paypal.com/ncp/payment/YOUR_PAYPAL_LINK_1" method="post" target="_top">
+          <input type="hidden" name="item_name" value="Social Media Pack">
+          <input type="hidden" name="amount" value="5.00">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="hidden" name="return" value="thankyou1.html">
+          <button type="submit" class="buy-btn">Buy with PayPal</button>
+        </form>
+
+        <!-- GCash Button -->
+        <button class="buy-btn gcash-btn" onclick="openGCash('gcash1')">Pay with GCash</button>
+      </div>
+
+      <!-- Template 2 -->
+      <div class="card">
+        <img src="design2.jpg" alt="Design Template 2">
+        <h3>Business Flyer</h3>
+        <p>Professional flyers for events, promos, or services.</p>
+
+        <form action="https://www.paypal.com/ncp/payment/YOUR_PAYPAL_LINK_2" method="post" target="_top">
+          <input type="hidden" name="item_name" value="Business Flyer">
+          <input type="hidden" name="amount" value="7.00">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="hidden" name="return" value="thankyou2.html">
+          <button type="submit" class="buy-btn">Buy with PayPal</button>
+        </form>
+
+        <button class="buy-btn gcash-btn" onclick="openGCash('gcash2')">Pay with GCash</button>
+      </div>
+
+      <!-- Template 3 -->
+      <div class="card">
+        <img src="design3.jpg" alt="Design Template 3">
+        <h3>Presentation Deck</h3>
+        <p>Clean and modern slides to impress your audience.</p>
+
+        <form action="https://www.paypal.com/ncp/payment/YOUR_PAYPAL_LINK_3" method="post" target="_top">
+          <input type="hidden" name="item_name" value="Presentation Deck">
+          <input type="hidden" name="amount" value="10.00">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="hidden" name="return" value="thankyou3.html">
+          <button type="submit" class="buy-btn">Buy with PayPal</button>
+        </form>
+
+        <button class="buy-btn gcash-btn" onclick="openGCash('gcash3')">Pay with GCash</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GCash Modals -->
+  <div id="gcash1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeGCash('gcash1')">&times;</span>
+      <h3>Pay via GCash - Social Media Pack</h3>
+      <p>Scan this QR to pay ₱250</p>
+      <img src="gcash1-qr.jpg" alt="GCash QR Code 1" style="max-width:250px;">
+      <br><br>
+      <a href="thankyou1.html" class="download-btn">I’ve Paid, Continue</a>
+    </div>
+  </div>
+
+  <div id="gcash2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeGCash('gcash2')">&times;</span>
+      <h3>Pay via GCash - Business Flyer</h3>
+      <p>Scan this QR to pay ₱350</p>
+      <img src="gcash2-qr.jpg" alt="GCash QR Code 2" style="max-width:250px;">
+      <br><br>
+      <a href="thankyou2.html" class="download-btn">I’ve Paid, Continue</a>
+    </div>
+  </div>
+
+  <div id="gcash3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeGCash('gcash3')">&times;</span>
+      <h3>Pay via GCash - Presentation Deck</h3>
+      <p>Scan this QR to pay ₱500</p>
+      <img src="gcash3-qr.jpg" alt="GCash QR Code 3" style="max-width:250px;">
+      <br><br>
+      <a href="thankyou3.html" class="download-btn">I’ve Paid, Continue</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Celwyn’s Canva Designs | All Rights Reserved</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function openGCash(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    function closeGCash(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
+</body>
+</html>
